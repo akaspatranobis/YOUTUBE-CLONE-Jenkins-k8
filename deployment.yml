@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-app-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: my-app
@@ -17,6 +17,13 @@ spec:
           image: apatranobis59/youtube:latest
           ports:
             - containerPort: 3000  # Your Node.js application should listen on port 3000
+          resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "1.5Gi"
+            cpu: "800m"  
 
 ---
 
