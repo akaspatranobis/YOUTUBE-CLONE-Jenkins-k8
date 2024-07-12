@@ -18,12 +18,12 @@ spec:
           ports:
             - containerPort: 3000  # Your Node.js application should listen on port 3000
           resources:
-          requests:
-            memory: "1Gi"
-            cpu: "500m"
-          limits:
-            memory: "1.5Gi"
-            cpu: "800m"  
+            requests:
+              memory: "1Gi"
+              cpu: "500m"
+            limits:
+              memory: "1.5Gi"
+              cpu: "800m"  
 
 ---
 
